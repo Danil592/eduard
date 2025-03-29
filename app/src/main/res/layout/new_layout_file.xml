@@ -180,8 +180,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/green"
-        android:visibility="gone"
+        android:id="@+id/ResultContainer"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/green"
@@ -197,8 +196,8 @@
             android:layout_marginTop="17dp"
             android:background="@color/white"
             android:src="@drawable/ic_icon"
-            app:layout_constraintStart_toStartOf="@id/green"
-            app:layout_constraintTop_toTopOf="@id/green" />
+            app:layout_constraintStart_toStartOf="@id/ResultContainer"
+            app:layout_constraintTop_toTopOf="@id/ResultContainer" />
 
         <TextView
         android:id="@+id/correct_wrong"
@@ -217,7 +216,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="@string/_continue"
-        app:layout_constraintBottom_toBottomOf="@id/green"
+        app:layout_constraintBottom_toBottomOf="@id/ResultContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/finger" />
