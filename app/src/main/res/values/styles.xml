@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="textAfterNum" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/rubik_bold</item>
+    </style>
+    <style name="headerText" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:textSize">60dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">firstAndroid</string>
+    <string name="_3">3</string>
+    <string name="_edik">Эдик</string>
+    <string name="_major">Мажор</string>
+    <string name="_lavelas">Лавелас</string>
+    <string name="_buisnesman">Бизнесмен</string>
+    <string name="_drug">друг</string>
+    <string name="_correct">верно</string>
+    <string name="_continue">продолжить</string>
+</resources>

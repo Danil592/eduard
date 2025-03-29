@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">firstAndroid</string>
+    <string name="_3">3</string>
+    <string name="_edik">Edik</string>
+    <string name="_major">Major</string>
+    <string name="_lavelas">Lavelas</string>
+    <string name="_buisnesman">Buisnesman</string>
+    <string name="_drug">drug</string>
+    <string name="_correct">correct</string>
+    <string name="_continue">continue</string>
 </resources>

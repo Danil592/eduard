@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/layoutEdik"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ibImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -19,20 +19,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginHorizontal="33dp"
-        android:text="Edik"
+        android:text="@string/_edik"
         android:layout_marginTop="96dp"
-        android:textSize="50sp"
+        style="@style/headerText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@id/ibImageButton" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/mcMainContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="33dp"
@@ -40,16 +40,18 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion">
 
 
         <LinearLayout
+            android:id="@+id/container.firstAnswer"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@drawable/shape_rounded_containers"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/number1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="15dp"
@@ -61,15 +63,17 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/faFirstAnswer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
-                android:text="Major"
-                android:textColor="#888992" />
+                android:text="@string/_major"
+                style="@style/textAfterNum"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/container.secondAnswer"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
@@ -77,6 +81,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/number2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="15dp"
@@ -88,15 +93,18 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/saSecondAnswer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
-                android:text="Lavelas"
+                style="@style/textAfterNum"
+                android:text="@string/_lavelas"
                 android:textColor="#888992" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/container.thirdAnswer"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
@@ -104,34 +112,38 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/number3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="15dp"
                 android:layout_marginStart="12dp"
                 android:background="@drawable/shape_rounded_variants"
                 android:gravity="center"
-                android:text="3"
+                android:text="@string/_3"
                 android:textColor="#888992"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <TextView
+                android:id="@+id/taThirdAnswer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
-                android:text="Buisnesman"
+                android:text="@string/_buisnesman"
+                style="@style/textAfterNum"
                 android:textColor="#888992" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/container.fourthAnswer"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
-            android:backgroundTint="#0EAD69"
             android:background="@drawable/shape_rounded_containers"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/number4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="15dp"
@@ -147,19 +159,19 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
-                android:text="drug"
-                android:textColor="@color/white" />
+                android:text="@string/_drug"
+                style="@style/textAfterNum"/>
         </LinearLayout>
 
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnSkip"
         android:layout_width="311dp"
         android:layout_height="58dp"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="#2574FF"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="30dp"
         android:text="skip"
@@ -169,9 +181,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/green"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#0EAD69"
+        android:background="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -185,24 +198,26 @@
             android:background="@color/white"
             android:src="@drawable/ic_icon"
             app:layout_constraintStart_toStartOf="@id/green"
-            app:layout_constraintTop_toTopOf="@+id/green" />
+            app:layout_constraintTop_toTopOf="@id/green" />
 
         <TextView
+        android:id="@+id/correct_wrong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="correct"
+        android:text="@string/_correct"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/finger"
+        app:layout_constraintBottom_toBottomOf="@id/finger"
         app:layout_constraintTop_toTopOf="@id/finger"
         app:layout_constraintStart_toEndOf="@id/finger"
         android:layout_marginStart="20dp"/>
 
     <Button
+        android:id="@+id/btnContinue"
         android:layout_width="311dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="continue"
-        app:layout_constraintBottom_toBottomOf="@+id/green"
+        android:text="@string/_continue"
+        app:layout_constraintBottom_toBottomOf="@id/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/finger" />
